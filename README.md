@@ -5,6 +5,7 @@
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | name     | string | null: false |
+| email    | string | null: false |
 | number   | string | null: false |
 | password | string | null: false |
 
