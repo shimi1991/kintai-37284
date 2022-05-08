@@ -1,0 +1,77 @@
+.wrapper {
+  display: flex;
+}
+.screen {
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 100vh;
+}
+
+.screen-header {
+  height: 100px;
+  padding: 0 100px;
+  background-color: #253141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-name a{
+  font-size: 20px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.button a {
+  font-size: 14px;
+  padding: 14px;
+  color: rgb(123, 255, 123);
+  text-decoration: none;
+}
+
+.time {
+  height: 100px;
+  display: flex;
+}
+
+.now-time{
+  color: black;
+  font-size: 40px;
+  margin: auto;
+}
+
+.work{
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-time {
+  font-size: 20px;
+  padding: 0 40px 0 0;
+}
+
+.continuous-work {
+  font-size: 20px;
+}
+
+.buttons {
+  background-color: #d3e1f4;
+  height: calc(100vh - 275px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-below {
+  padding: 40px 50px;
+}
+
+.button-name a {
+  border: 1px solid black;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
