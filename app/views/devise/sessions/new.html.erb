@@ -8,10 +8,10 @@
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :number %>
+            <%= f.label :email%>
           </div>
           <div class='field-input'>
-            <%= f.email_field :number, autofocus: true%>
+            <%= f.email_field :email, autofocus: true%>
           </div>
           <div class='field'>
             <div class='field-label'>
