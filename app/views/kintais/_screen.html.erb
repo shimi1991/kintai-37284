@@ -1,8 +1,9 @@
 <div class="screen-header">
   <div class="user-name">
-    <a href="#">Tom</a>
+    <%= current_user.name %>
   </div>
   <div class="button">
+    <%= link_to "アカウント編集", edit_user_path(current_user) %>
     <a href="#">ログアウト</a>
   </div>
 </div>
