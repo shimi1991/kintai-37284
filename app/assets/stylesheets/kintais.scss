@@ -67,7 +67,17 @@
   padding: 40px 50px;
 }
 
-.button-name a {
+.users-show {
+  display: flex;
+  border: 1px solid black;
+}
+.users-name {
+  font-size: 20px;
+  
+  padding: 0 40px 0 40px;
+}
+
+.form-submit {
   border: 1px solid black;
   font-size: 30px;
   text-decoration: none;

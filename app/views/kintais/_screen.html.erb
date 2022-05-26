@@ -24,20 +24,21 @@
   <div class="total-time">
     <p> 合計残業時間　◯◯時間○○分 </p>
   </div>
-  <div class="continuous-work">
-    <p> 連続勤務日数○日 </p>
-  </div>
 </div>
 
-<div class="buttons">
-  <div class="button-below">
-    <div class="button-name">
-      <a href="#">出勤</a>
+<%= form_with model: @kintai,url: kintais_path, local: true do |f| %>
+  <div class="buttons">
+    <div class="button-below">
+      <%= f.submit "出勤", id: "start-btn", class: 'form-submit' %>
+    </div>
+    <div class="button-below">
+      <%= f.submit "退勤", id: "end-btn", class: 'form-submit' %>
     </div>
   </div>
-  <div class="button-below">
-    <div class="button-name">
-      <a href="#">退勤</a>
-    </div>
+<% end %>
+
+<% if current_user.admin? %>
+  <div class="user-list">
+    <%= render "user_list" %>
   </div>
-</div>
+<% end %>
