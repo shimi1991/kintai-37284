@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 2022_05_22_124409) do
   create_table "kintais", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.time "start_time"
     t.time "end_time"
-    t.time "total_time"
-    t.time "over_time"
+    t.string "total_time"
+    t.string "over_time"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
