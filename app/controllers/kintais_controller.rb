@@ -7,13 +7,18 @@ class KintaisController < ApplicationController
   def create
     @kintai = Kintai.new(kintai_params)
     case params[:commit]
-      when "出勤" ; @kintai.start_time = Time.now
-      when "退勤" ; @kintai.end_time = Time.now
+      when "出勤" ; session[:start_time] = Time.now
+      when "退勤" ; session[:end_time] = Time.now
     end
-    if @kintai.save
+    if session[:start_time] != nil && session[:end_time] != nil
+      @kintai[:start_time] = session[:start_time]
+      @kintai[:end_time] = session[:end_time]
+      @kintai.save
+      session[:start_time] = nil
+      session[:end_time] = nil
       redirect_to root_path
     else
-#      redirect_to root_path
+      redirect_to root_path
     end
   end
 
