@@ -2,6 +2,8 @@ class KintaisController < ApplicationController
   
   def index
     @users = User.all
+    @over_time = Kintai.all.group(:user_id).sum(:over_time)
+    
   end
 
   def create
@@ -15,7 +17,6 @@ class KintaisController < ApplicationController
       @kintai[:end_time] = session[:end_time]
       session[:over_time] = (@kintai[:end_time] - @kintai[:start_time]).floor / 3600
       @kintai[:over_time] = session[:over_time]
-      binding.pry
       @kintai.save
       session[:start_time] = nil
       session[:end_time] = nil
