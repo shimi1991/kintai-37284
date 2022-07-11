@@ -15,7 +15,7 @@ class KintaisController < ApplicationController
     if session[:start_time] != nil && session[:end_time] != nil
       @kintai[:start_time] = session[:start_time]
       @kintai[:end_time] = session[:end_time]
-      session[:over_time] = (@kintai[:end_time] - @kintai[:start_time]).floor / 3600
+      session[:over_time] = (@kintai[:end_time] - @kintai[:start_time]).floor / 3600 - 8
       @kintai[:over_time] = session[:over_time]
       @kintai.save
       session[:start_time] = nil
