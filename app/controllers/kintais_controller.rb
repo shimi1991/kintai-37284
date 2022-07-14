@@ -16,6 +16,7 @@ class KintaisController < ApplicationController
       @kintai[:start_time] = session[:start_time]
       @kintai[:end_time] = session[:end_time]
       session[:over_time] = (@kintai[:end_time] - @kintai[:start_time]).floor / 3600 - 8
+      # 残業時間がマイナスの場合の処理
       if session[:over_time] < 0
         session[:over_time] = 0
       end
