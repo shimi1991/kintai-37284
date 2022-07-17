@@ -12,6 +12,7 @@ class KintaisController < ApplicationController
       when "出勤" ; session[:start_time] = Time.now
       when "退勤" ; session[:end_time] = Time.now
     end
+    # 出勤、退勤ボタンを押した時の処理
     if session[:start_time] != nil && session[:end_time] != nil
       @kintai[:start_time] = session[:start_time]
       @kintai[:end_time] = session[:end_time]
