@@ -1,3 +1,5 @@
+// 時計の表示
+
 const clock = () => {
   const d = new Date();
 
