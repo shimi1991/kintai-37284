@@ -1,0 +1,2 @@
+class Kintai < ApplicationRecord
+end
