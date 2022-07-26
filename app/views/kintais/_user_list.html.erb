@@ -1,0 +1,11 @@
+<%# 管理者のみ表示されるユーザーリスト %>
+<% @users.each do |user|%>
+  <div class="users-show">
+    <div class="users-name">
+      <%= user.name %>
+    </div>
+    <div class="total-time">
+      <p>合計残業時間  <%= @over_time[user.id] %> 時間</p>
+    </div>
+  </div>
+<% end %>
